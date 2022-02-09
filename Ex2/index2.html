@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Exercice 5</h1>
+    <h2>Descriptif produit</h2>
+
+    <table id="tarif">
+        <tr>
+            <td>Chaise</td>
+            <td>25</td>
+            <td><button id="btn" class="button" onclick="addItems()">Ajouter au panier</button></td>
+        </tr>
+        <tr>
+            <td>Table</td>
+            <td>150</td>
+            <td><button id="btn" class="button" onclick="addItems()">Ajouter au panier</button></td>
+        </tr>
+        <tr>
+            <td>Meuble TV</td>
+            <td>250</td>
+            <td><button id="btn" class="button" onclick="addItems()">Ajouter au panier</button></td>
+        </tr>
+    </table>
+
+    <p id="info"></p>
+
+    <h2>Mon panier</h2>      
+    
+    <table id="panier">
+        <tr>
+        </tr>
+    </table>
+    Prix Total : <input type="text" id="prixtotal" class="total" size="20" >
+
+    <div id="dh">
+    </div>
+
+    <script src="./js/ex4.js"></script>
+</body>
+</html>

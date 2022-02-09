@@ -2,7 +2,7 @@
     border: 3px dashed red;
 }
 
-.blue-bordered {
+.blue-bordered {7
     border: 3px dashed blue;
 }
 
@@ -18,13 +18,23 @@
     color: green;
 }
 
-table,
-td {
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
+
+td, th {
     border: 1px solid black;
 }
 
-thead,
-tfoot {
-    background-color: white;
-    color: black;
+td {
+    text-align: left;
+}
+
+.total {
+    border-color: rgb(200,200,200);
+    border-style: solid;
+    background-color: rgb(235,235,235);
 }

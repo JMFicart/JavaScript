@@ -1,18 +1,44 @@
-var tabColor = ['blue', 'red', 'green'];
-var indexColor = 0;
+var total = 0;
+totalbox = document.getElementById('prixtotal');
+totalbox.value = total;
 
 function addItems(){
-    const div = document.getElementById('dh');
-    const p = document.createElement('p');
+    // Récupération des données dans la grille tarif.
+    var tarif = document.getElementById("tarif"),rIndex,cIndex;
+    var article;
+    var prix;
 
-    p.innerText += "Element " + indexColor;
-    p.style.color = tabColor[indexColor];
-    
-    div.appendChild(p);
+    for(var i = 0; i < tarif.rows.length; i++)
+    {
+        for(var j = 0; j < tarif.rows[i].cells.length; j++)
+        {
+            tarif.rows[i].cells[j].onclick = function()
+            {
+                rIndex = this.parentElement.rowIndex;
+                cIndex = this.cellIndex;
+                if (cIndex == 2){
+                    // Récupération des données choisies.
+                    article = tarif.rows[rIndex].cells[cIndex - 2].innerHTML;
+                    prix = tarif.rows[rIndex].cells[cIndex - 1].innerHTML;
 
-    indexColor++;
-    if (indexColor == tabColor.length){
-        indexColor = 0;
+                    // Ajout des données récupérées.
+                    var panier = document.getElementById('panier');
+
+                    var rowCount = panier.rows.length - 1;
+                    var row = panier.insertRow(rowCount);
+
+                    var cell1 = row.insertCell(0);
+                    cell1.innerHTML = article;
+
+                    var cell2 = row.insertCell(1);
+                    cell2.innerHTML = prix;
+
+                    // Mise à jour du total.
+                    total += parseInt(prix);
+                    totalbox = document.getElementById('prixtotal');
+                    totalbox.value = total;
+                }
+            };
+        }
     }
-    document.getElementById("btn").style.background = tabColor[indexColor];
 }
