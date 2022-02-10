@@ -61,3 +61,4 @@ function totalColumn(index){
     }
     inputTotal.value = total;
 }
+
