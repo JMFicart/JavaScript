@@ -42,3 +42,27 @@ function addItems(){
         }
     }
 }
+
+// Correction
+// mettre ds le html addToCart(this)
+function addToCart(clicked){
+    const parent = clicked.parentNode;
+    const prix = parent.previousElementSibling;
+    const article = prix.previousElementSibling;
+
+    const tr = document.createElement('tr');
+    const td_article = document.createElement('td');
+    const td_prix = document.createElement('td');
+
+    td_article.innerText = article.innerText;
+    td_prix.innerText = prix.innerText
+
+    tr.appendChild(td_article);
+    tr.appendChild(td_prix);
+
+    const panier = document.getElementById('panier');
+    panier.appendChild(tr);
+
+    const total = document.getElementById('total');
+    total.value = parseInt(total.value) + parseInt(prix.innerText);
+}
