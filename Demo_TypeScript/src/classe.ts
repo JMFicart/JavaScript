@@ -24,6 +24,14 @@ export class Produit {
         this._marque = value;
     }
 
+    get prix(){
+        return this._prix;
+    }
+
+    set prix(value: number){
+        this._prix = value;
+    }
+
     vendre(qte?: number){
         const qteeffective = (qte ? qte : 1 );
         console.log(qteeffective + ' ' + this._nom + ' ont été vendus (total : ' + (qteeffective * this._prix) + ')');

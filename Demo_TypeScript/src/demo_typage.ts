@@ -28,7 +28,7 @@ let grandnombre = 250_000_000_000_000;
 
 // Tableaux
 let ageanimaux: number[] = [2,5,1];
-let nomanimaux: Array<string> = ['riri', 'fifi', 'loulou'];
+let nomanimaux: Array<String> = ['riri', 'fifi', 'loulou'];
 
 // type unknown
 let saipa: unknown = "saipa";
