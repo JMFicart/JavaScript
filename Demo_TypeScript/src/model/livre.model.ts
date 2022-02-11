@@ -20,6 +20,3 @@ const monlivre: LivrePoche = {
 
 monlivre.nbrePages = 160;
 
-interface LivrePoche extends Livre {
-    reduction: number;
-}

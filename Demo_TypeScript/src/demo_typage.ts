@@ -1,3 +1,5 @@
+import { Produit } from "./classe";
+
 // Déclaration de variables
 let nom  = "string"; // string par inférence
 let age: number = 15;
@@ -103,7 +105,7 @@ type Type1 = Date | string;
 type Type2 = string | number;
 type TypeInter = Type1 & Type2;
 
-let varInter: TypeInter = 'salut';  // Je peux prendre ce qu'il y a de commun aux 2 types.
+let varInter: TypeInter = 'salut';  // Je peux prendre ce qu'il y a de commun aux 2 types, dans ce cas-ci string.
 
 let object: {
     nom: string,
@@ -125,3 +127,5 @@ let maVoiture: Voiture = {
     nbreportes: 3,
     immatriculation: 'KYE188'
 };
+
+
